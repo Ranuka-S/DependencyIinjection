@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="Account" class="com.ranuka.model.Account">
+	</bean>
+
+
+	<bean id="Customer" class="com.ranuka.model.Customer">
+		<property name="myaccounts">
+			<ref bean="Account" />
+		</property>
+	</bean>
+
+
+
+</beans>
